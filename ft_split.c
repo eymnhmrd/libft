@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:23:45 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/29 06:39:34 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/29 22:36:55 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static int	ft_count_words(char const *s, char c)
 	}
 	return (count);
 }
+
 
 static char	*ft_get_word(char **s, char c)
 {

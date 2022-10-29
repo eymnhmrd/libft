@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:48:19 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/20 10:58:30 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/29 22:29:56 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	long	nbr;
 
 	nbr = n;
-	if (nbr <= 0)
+	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
 		nbr = -nbr;
