@@ -6,13 +6,13 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 06:22:31 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/18 06:29:04 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/29 07:13:39 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// void ft_lstadd_back(t_list **lst, t_list *new)
-// {
-    
-// }
+void ft_lstadd_back(t_list **lst, t_list *new)
+{
+	
+}

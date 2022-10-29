@@ -6,13 +6,13 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:49:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/28 22:45:27 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/29 06:47:00 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count_digit(int n)
+static int	ft_count_digit(int n)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ static int ft_count_digit(int n)
 	return (len);
 }
 
-static char *ft_strrev(char *str)
+static char	*ft_strrev(char *str)
 {
 	size_t	i;
 	size_t	l;
@@ -44,39 +44,37 @@ static char *ft_strrev(char *str)
 	return (str);
 }
 
-static 
-
-char *ft_itoa(int n)
+static void	ft_check_negative(int *n, unsigned int *nbr, size_t *nl)
 {
-	char	*num;
-	size_t	nl;
-	size_t	i;
-
-	i = 1;
-	nl = ft_count_digit(n);
-	if (n < 0)
+	if (*n < 0)
 	{
+		*nbr = -(*n);
 		nl++;
-		n *= -1;
 	}
-	num = malloc(sizeof(char) * (nl + 1));
-	if (n < 0)
-		num[0] = '-';
-	while (i < nl)
-	{
-		num[i] = n % 10 + '0';
-		n /= 10;
-		i++;
-	}
-	num[i] = '\0';
-	return (ft_strrev(num));
 }
 
- #include <stdio.h>
+char	*ft_itoa(int n)
+{
+	char			*num;
+	size_t			nl;
+	size_t			i;
+	unsigned int	nbr;
 
- int main()
- {
-     int n = 12345;
-     printf("%s",ft_itoa(-2147483648));
-     // printf("%d",n);
- }
+	i = 0;
+	nl = 0;
+	nbr = n;
+	ft_check_negative(&n, &nbr, &nl);
+	nl += ft_count_digit(n);
+	num = malloc(sizeof(char) * (nl + 1));
+	if (!num)
+		return (NULL);
+	while (nbr)
+	{
+		num[i] = nbr % 10 + '0';
+		nbr /= 10;
+		i++;
+	}
+	if (n < 0)
+		num[i++] = '-';
+	return (ft_strrev(num));
+}

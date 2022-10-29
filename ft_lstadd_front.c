@@ -6,17 +6,17 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 03:38:26 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/18 05:42:33 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/29 06:42:45 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (new)
-    {
-        new->next = *lst;
-        *lst = new;
-    }
+	if (new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }

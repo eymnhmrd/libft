@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:21:27 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/23 22:27:23 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/28 23:03:51 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	{
 		str[i] = s1[start];
 		start++;
-		i++;	
+		i++;
 	}
 	str[i] = '\0';
 	return (str);
