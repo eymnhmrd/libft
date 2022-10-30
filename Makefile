@@ -6,7 +6,7 @@
 #    By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 07:03:51 by ahamrad           #+#    #+#              #
-#    Updated: 2022/10/29 21:08:30 by ahamrad          ###   ########.fr        #
+#    Updated: 2022/10/30 07:04:30 by ahamrad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ B_SRCS = ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
 
 OBJS = $(SRCS:.c=.o)
 
