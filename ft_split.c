@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:23:45 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/29 22:36:55 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/31 02:16:28 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_count_words(char const *s, char c)
 	{
 		if (s[i] == c)
 			i++;
-		else 
+		else
 		{
 			count++;
 			while (s[i] != c && s[i])
@@ -32,7 +32,6 @@ static int	ft_count_words(char const *s, char c)
 	}
 	return (count);
 }
-
 
 static char	*ft_get_word(char **s, char c)
 {
@@ -59,7 +58,7 @@ static char	*ft_get_word(char **s, char c)
 	return (str);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**arr;
 	char	*str;

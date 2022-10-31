@@ -6,12 +6,11 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:49:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/29 22:27:42 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/31 02:08:44 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_count_digit(int n)
 {
@@ -61,7 +60,7 @@ static char	*return_zero(void)
 
 	zero = malloc(2 * sizeof(char));
 	if (!zero)
-		return (zero);		
+		return (zero);
 	zero[0] = '0';
 	zero[1] = '\0';
 	return (zero);

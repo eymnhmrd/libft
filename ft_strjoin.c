@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 08:45:09 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/29 06:45:00 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/31 02:17:28 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!new)
 		return (NULL);
-	while(s1[i])
+	while (s1[i])
 	{
 		new[i] = s1[i];
 		i++;

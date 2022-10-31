@@ -6,13 +6,13 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 06:22:31 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/30 06:36:35 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/31 02:10:02 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
@@ -25,8 +25,8 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 		{
 			tmp = tmp->next;
 		}
-		tmp->next = new; 
+		tmp->next = new;
 	}
-	else 
+	else
 		*lst = new;
 }
