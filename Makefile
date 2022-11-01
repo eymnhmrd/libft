@@ -6,7 +6,7 @@
 #    By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 07:03:51 by ahamrad           #+#    #+#              #
-#    Updated: 2022/10/31 00:43:48 by ahamrad          ###   ########.fr        #
+#    Updated: 2022/11/01 04:38:45 by ahamrad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,11 +63,11 @@ B_OBJS = $(B_SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
-RM = rm -f
+RM = rm -rf
 
 all: $(NAME)
 
-$(NAME):$(OBJS)
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
@@ -78,7 +78,7 @@ bonus : $(B_OBJS) $(OBJS)
 clean:
 	@$(RM) $(OBJS) $(B_OBJS)
 
-fclean:clean
+fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all

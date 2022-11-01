@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:23:45 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/31 02:16:28 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/10/31 22:06:40 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_count_words(s, c);
 	arr = (char **)malloc(sizeof(char *) * (len + 1));

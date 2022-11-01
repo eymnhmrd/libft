@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:49:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/31 02:08:44 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/01 06:12:12 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,6 @@ static int	ft_count_digit(int n)
 		len++;
 	}
 	return (len);
-}
-
-static char	*ft_strrev(char *str)
-{
-	size_t	i;
-	size_t	l;
-	char	tmp;
-
-	l = ft_strlen(str) - 1;
-	i = 0;
-	while (i < l)
-	{
-		tmp = str[i];
-		str[i] = str[l];
-		str[l] = tmp;
-		i++;
-		l--;
-	}
-	return (str);
 }
 
 static size_t	ft_check_negative(int *n, unsigned int *nbr, size_t nl)
@@ -85,17 +66,20 @@ char	*ft_itoa(int n)
 		return (num);
 	while (nbr)
 	{
-		num[i] = nbr % 10 + '0';
+		num[nl - 1 - i] = nbr % 10 + '0';
 		nbr /= 10;
 		i++;
 	}
 	if (n < 0)
-		num[i++] = '-';
-	num[i++] = '\0';
-	return (ft_strrev(num));
+		num[0] = '-';
+	num[nl] = '\0';
+	return (num);
 }
 
-//int main ()
+//#include <stdio.h>
+
+//int main()
 //{
-//	printf("%s\n", ft_itoa(-15));
+//	int n = 123456;
+//	printf("%s",ft_itoa(n));
 //}
