@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 05:43:07 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/01 01:56:43 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/01 23:25:15 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
 
 //char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 //{

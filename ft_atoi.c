@@ -6,21 +6,20 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 04:54:03 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/01 05:38:44 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/02 00:35:52 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-static int	handler_long_atoi(long long int n, long long int o)
+static int	ft_handler_long_atoi(long long int n, long long int o)
 {
 	if ((n / 10) == o)
 		return (0);
 	return (1);
 }
 
-static int	rtn_atoi(long long int res, int sign, const char *str)
+static int	ft_rtn_atoi(long long int res, int sign, const char *str)
 {
 	long long int	old_res;
 
@@ -28,9 +27,9 @@ static int	rtn_atoi(long long int res, int sign, const char *str)
 	{
 		old_res = res;
 		res = res * 10 + (*str - '0');
-		if (handler_long_atoi(res, old_res) == 0)
+		if (ft_handler_long_atoi(res, old_res) == 0)
 			str++;
-		else if (handler_long_atoi(res, old_res) == 1)
+		else if (ft_handler_long_atoi(res, old_res) == 1)
 		{
 			if (sign == -1)
 				return (0);
@@ -42,8 +41,8 @@ static int	rtn_atoi(long long int res, int sign, const char *str)
 
 int	ft_atoi(const char *str)
 {
-	long long int		res;
-	int					sign;
+	long long int	res;
+	int				sign;
 
 	sign = 1;
 	res = 0;
@@ -55,15 +54,5 @@ int	ft_atoi(const char *str)
 			sign = sign * -1;
 		str++;
 	}
-	return (rtn_atoi(res, sign, str) * sign);
+	return (ft_rtn_atoi(res, sign, str) * sign);
 }
-
-//#include <stdio.h>
-
-//int main()
-//{
-//	//printf("%d\n",ft_atoi("-1584562496666895533685526668"));
-//	//printf("%d",atoi("-1584562496666895533685526668"));
-//	printf("%d\n",ft_atoi("+12"));
-//	printf("%d",atoi("+12"));
-//}

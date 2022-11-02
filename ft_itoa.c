@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 00:49:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/01 06:12:12 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/02 00:47:02 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,3 @@ char	*ft_itoa(int n)
 	num[nl] = '\0';
 	return (num);
 }
-
-//#include <stdio.h>
-
-//int main()
-//{
-//	int n = 123456;
-//	printf("%s",ft_itoa(n));
-//}
