@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:07:42 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/02 09:19:02 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/05 04:26:43 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst, src, len);
 	else
 		while (len--)
-		{
 			*((char *)(dst + len)) = *((char *)(src + len));
-		}
 	return (dst);
 }

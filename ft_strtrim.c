@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:21:27 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/31 02:20:51 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/05 09:03:23 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str)
 		return (NULL);
 	while (start <= end)
-	{
-		str[i] = s1[start];
-		start++;
-		i++;
-	}
+		str[i++] = s1[start++];
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-// 	// char *s = ft_strtrim("      xxxxd    xxxx   ", " x");
-// 	// // free(s);
-// 	// printf("%s \n",s);
-// }

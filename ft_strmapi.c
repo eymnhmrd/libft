@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:45:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/10/31 02:19:02 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/05 14:54:53 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
+}
+
+#include <stdio.h>
+
+char	f(unsigned int indice, char c)
+{
+	(void)indice;
+	return (c - 32);
+}
+
+int main()
+{
+	printf("%s", ft_strmapi("hasbulla", f));
 }
