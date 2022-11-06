@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:45:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/05 14:54:53 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/06 12:49:43 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-#include <stdio.h>
+//#include <stdio.h>
 
-char	f(unsigned int indice, char c)
-{
-	(void)indice;
-	return (c - 32);
-}
+//char	f(unsigned int indice, char c)
+//{
+//	(void)indice;
+//	return (c - 32);
+//}
 
-int main()
-{
-	printf("%s", ft_strmapi("hasbulla", f));
-}
+//int main()
+//{
+//	printf("%s", ft_strmapi("hasbulla", f));
+//}

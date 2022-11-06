@@ -6,7 +6,7 @@
 #    By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 07:03:51 by ahamrad           #+#    #+#              #
-#    Updated: 2022/11/02 02:05:32 by ahamrad          ###   ########.fr        #
+#    Updated: 2022/11/06 09:40:27 by ahamrad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,13 +68,13 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 
 %.o: %.c
 	cc $(CFLAGS) -c $< -o $@
 
 bonus : $(B_OBJS) $(OBJS)
-	ar rc $(NAME) $(B_OBJS) $(OBJS)
+	@ar rc $(NAME) $(B_OBJS) $(OBJS)
 clean:
 	@$(RM) $(OBJS) $(B_OBJS)
 
