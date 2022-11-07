@@ -6,34 +6,10 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 05:43:07 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/06 14:17:39 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/07 16:34:34 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-//char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-//{
-//	char	*str;
-//	char	*to_find;
-//	size_t	l;
-
-//	str = (char *)haystack;
-//	to_find = (char *)needle;
-//	if (!(*to_find))
-//		return ((char *)str);
-//	l = ft_strlen(to_find);
-//	if (len < l || ft_strlen(str) < l)
-//		return (NULL);
-//	while (*str != '\0' && len >= l)
-//	{
-//		if (ft_memcmp(str, to_find, l) == 0)
-//			return (str);
-//		str++;
-//		len--;
-//	}
-//	return (NULL);
-//}
 #include"libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
