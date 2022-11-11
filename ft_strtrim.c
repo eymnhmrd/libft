@@ -6,12 +6,11 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 22:21:27 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/05 09:03:23 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:38:08 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_in_set(const char *s, char c)
 {

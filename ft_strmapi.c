@@ -6,7 +6,7 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:45:47 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/07 16:35:02 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:39:44 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	str = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)

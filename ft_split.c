@@ -6,11 +6,24 @@
 /*   By: ahamrad <ahamrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 21:23:45 by ahamrad           #+#    #+#             */
-/*   Updated: 2022/11/06 11:51:06 by ahamrad          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:48:34 by ahamrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	**ft_allocation_error(char **arr)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i++]);
+	}
+	free(arr);
+	return (NULL);
+}
 
 static int	ft_count_words(char const *s, char c)
 {
@@ -76,6 +89,8 @@ char	**ft_split(char const *s, char c)
 	while (i < len)
 	{
 		arr[i] = ft_get_word(&str, c);
+		if (!arr[i])
+			return (ft_allocation_error(arr));
 		i++;
 	}
 	arr[i] = NULL;
